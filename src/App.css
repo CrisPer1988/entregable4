@@ -70,7 +70,7 @@
     padding: 0.3rem 0.5rem;
 }
 
-::placeholder { color: #555A88; }
+::placeholder { color: #000000; }
 
 .form__btn {
     width: 100%;
