@@ -1,0 +1,173 @@
+.app__form {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(167, 164, 164, 0.2);
+    backdrop-filter: blur(2px); 
+    transform: translateX(-100%); 
+    transition: transform 0.5s ;
+    
+}
+
+.app__form-visible {
+    transform: translateX(0);
+}
+
+.form__container {
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    height: 80%;
+    background-color: #555A88;
+    color: white;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s;
+}
+
+.form__container:hover {
+    transform: scale(1.03);
+}
+
+.close__form {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 30px;
+    text-align: center;
+    border-radius: 10px;
+    transition: background-color 0.2s  ;
+}
+
+.close__form:hover {
+    background-color: #555A88;
+    border-radius: 10px;
+    color: white;
+}
+
+
+.form__tittle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.form__seccion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-bottom: 15px;
+}
+
+.form__label {
+    color: rgb(245, 240, 240);
+    padding-left: 6px;
+}
+
+.form__input {
+    padding: 0.3rem 0.5rem;
+}
+
+.form__btn {
+    width: 100%;
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: #ffffff;
+    color:#000000;
+    font-size: 1rem;
+    border-radius: 8px;
+    
+}
+
+.btn__open {
+    margin: 10px 15px;
+    width: 150px;
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: #555A88;
+    color: white;
+    border-radius: 8px;
+}
+
+.app__tittle{
+    text-align: center;
+    background-color: #555A88;
+    color: white;
+    letter-spacing: 0.3rem;
+    font-size: 2.5rem;
+    
+}
+
+.card__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+    border: 2px solid #555A88;
+    border-radius: 15px;
+    
+}
+
+.container__btn-card {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 5px;
+} 
+
+.card__btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #dadada;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    
+}
+
+.card__btn-delete {
+    color: red;
+}
+
+.card__btn-edit {
+    color: green;
+}
+
+.card__info {
+   margin-left: 5px;
+}
+
+.app__card {
+    max-width: 100%;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) ;
+     
+}
+
+/* @media (max-width: 600px) {
+    .app__card {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        
+         
+    }
+
+    .card__container {
+       
+       
+        flex-direction: column;
+        
+    }
+    
+} */
+
+

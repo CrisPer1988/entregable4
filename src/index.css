@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Secular+One&display=swap');
+/*------RESET------*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Secular One', sans-serif;
+    background-color: #e7e9f0;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+h1, h2, h3, h4, p, ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+button {
+    border: none;
+}
+
+input {
+    outline: 0;
+    font-family: 'Secular One', sans-serif;;
+}
+
+li {
+    list-style: none;
+}
