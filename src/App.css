@@ -28,7 +28,6 @@
     border-radius: 15px;
     position: relative;
     box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.2);
-  
 }
 
 .close__form {
@@ -83,7 +82,6 @@
     font-weight: bold;
     border-radius: 8px;
     box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.2);
-    
 }
 
 .form__btn:hover {
@@ -107,7 +105,6 @@
     color: white;
     letter-spacing: 0.3rem;
     font-size: 2.5rem;
-    
 }
 
 .card__container {
@@ -146,7 +143,6 @@
     margin-bottom: 5px;
     margin-left: 5px;
     box-shadow: 2px 2px 2px 1px rgba(29, 29, 29, 0.2);
-    
 }
 
 .card__btn-delete {
@@ -164,24 +160,9 @@
 .app__card {
     max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) ;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 1fr
 }
 
-/* @media (max-width: 600px) {
-    .app__card {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        
-         
-    }
-
-    .card__container {
-       
-       
-        flex-direction: column;
-        
-    }
-    
-} */
 
 
