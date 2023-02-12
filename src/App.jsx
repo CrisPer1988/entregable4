@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "./App.css";
+import Footer from "./components/Footer";
 import FormUser from "./components/FormUser";
 import UserCard from "./components/UserCard";
 
@@ -109,24 +110,8 @@ function App() {
             />
           ))}
         </div>
-
-        <footer className="app__footer">
-          <div className="app__footer--socials">
-            <a href="#">
-              <i className="bx bxl-github footer__icon"></i>
-            </a>
-            <a href="#">
-              <i className="bx bxl-linkedin-square footer__icon"></i>
-            </a>
-          </div>
-          <div className="app__footer--creators">
-            <p>
-              Created by:<span> Cristian Norberto</span> &{" "}
-              <span>Alejandro Aguilar</span>
-            </p>
-          </div>
-        </footer>
       </div>
+      <Footer />
     </div>
   );
 }
