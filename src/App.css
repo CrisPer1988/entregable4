@@ -130,6 +130,10 @@
     color: white;
 }
 
+.card__list {
+    line-height: 30px;
+}
+
 .container__btn-card {
     display: flex;
     justify-content: end;
@@ -174,6 +178,27 @@
 .app__card-show {
     display: flex;
     flex-direction: column;
+    border-top: 2px solid #555A88;
+    max-width: 100%;
+    text-align: center;
+    
+}
+
+.btn__column {
+    margin: 10px 15px;
+    width: 150px;
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: #555A88;
+    color: white;
+    border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+    .btn__column {
+        display: none;
+    }
+    
 }
 
 

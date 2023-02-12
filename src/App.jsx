@@ -64,9 +64,12 @@ function App() {
   }
 
   const handleColumn = () =>{
+    if(!isColumn){
     setIsColumn(true)
+  }else{
+    setIsColumn(false)
   }
-
+  }
 
   return (
     <div className="app">
@@ -81,7 +84,7 @@ function App() {
           setUpdateInfo={setUpdateInfo}
                 />
      </div>
-     <button className='btn__open' onClick={handleColumn}>holaaa</button>
+     <button className='btn__column' onClick={handleColumn}>{isColumn ? "Row" : "Column"}</button>
      <div>
      <div className={isColumn ? "app__card-show" : "app__card"}>
       {
