@@ -209,7 +209,7 @@
   position: fixed;
   bottom: 0px;
   right: 0;
-  left: 0;
+  left: 0; 
   background-color: #555a88;
   display: flex;
   flex-direction: column;
