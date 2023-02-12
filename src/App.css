@@ -110,6 +110,11 @@
   border-bottom-right-radius: 100px;
 }
 
+.app__navbar {
+  display: flex;
+  justify-content: center;
+}
+
 .card__container {
   display: flex;
   flex-direction: column;
@@ -199,6 +204,30 @@
   background-color: #555a88;
   color: white;
   border-radius: 8px;
+}
+
+.app__footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #555a88;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: auto;
+  padding: 15px 0;
+}
+
+.footer__icon {
+  font-size: 35px;
+  color: white;
+}
+
+.app__footer--creators p > span {
+  color: white;
 }
 
 @media (max-width: 600px) {
