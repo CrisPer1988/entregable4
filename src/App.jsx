@@ -79,9 +79,14 @@ function App() {
   return (
     <div className="app">
       <h1 className="app__tittle">Users</h1>
-      <button onClick={handleOpen} className="btn__open">
-        Open Form
-      </button>
+      <nav className="app__navbar">
+        <button onClick={handleOpen} className="btn__open">
+          New User +
+        </button>
+        <button className="btn__column" onClick={handleColumn}>
+          Change Display
+        </button>
+      </nav>
       <div className={`app__form ${isOpen && `app__form-visible`}`}>
         <FormUser
           createNewUser={createNewUser}
@@ -91,9 +96,7 @@ function App() {
           setUpdateInfo={setUpdateInfo}
         />
       </div>
-      <button className="btn__column" onClick={handleColumn}>
-        {isColumn ? "Row" : "Column"}
-      </button>
+
       <div>
         <div className={isColumn ? "app__card-show" : "app__card"}>
           {users?.map((user) => (
@@ -106,6 +109,23 @@ function App() {
             />
           ))}
         </div>
+
+        <footer className="app__footer">
+          <div className="app__footer--socials">
+            <a href="#">
+              <i className="bx bxl-github footer__icon"></i>
+            </a>
+            <a href="#">
+              <i className="bx bxl-linkedin-square footer__icon"></i>
+            </a>
+          </div>
+          <div className="app__footer--creators">
+            <p>
+              Created by:<span> Cristian Norberto</span> &{" "}
+              <span>Alejandro Aguilar</span>
+            </p>
+          </div>
+        </footer>
       </div>
     </div>
   );
