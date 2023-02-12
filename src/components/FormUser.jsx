@@ -28,6 +28,8 @@ const handleX = () => {
     setUpdateInfo()
     handleClose()
 }
+
+
    
 
   return (

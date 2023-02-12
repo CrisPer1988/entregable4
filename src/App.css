@@ -171,6 +171,13 @@
     
 }
 
+.app__card-show {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 
 
 

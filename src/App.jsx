@@ -8,12 +8,15 @@ function App() {
   const [users, setUsers] = useState()
   const [updateInfo, setUpdateInfo] = useState()
   const [isOpen, setIsOpen] = useState(false)
+  const [isColumn, setIsColumn] = useState(false)
 
   const getAllUsers = () =>{
     const url = `https://users-crud.academlo.tech/users/`
 
     axios.get(url)
-    .then(res => setUsers(res.data))
+    .then(res => {
+      setUsers(res.data)
+    })
     .catch(err => console.log(err))
   }
 
@@ -59,8 +62,11 @@ function App() {
   const handleClose = () =>{
     setIsOpen(false)
   }
-  
- 
+
+  const handleColumn = () =>{
+    setIsColumn(true)
+  }
+
 
   return (
     <div className="app">
@@ -75,8 +81,9 @@ function App() {
           setUpdateInfo={setUpdateInfo}
                 />
      </div>
+     <button className='btn__open' onClick={handleColumn}>holaaa</button>
      <div>
-     <div className='app__card'>
+     <div className={isColumn ? "app__card-show" : "app__card"}>
       {
         users?.map(user => (
         
