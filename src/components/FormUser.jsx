@@ -8,6 +8,7 @@ const FormUser = ({
   updateUserById,
   handleClose,
   setUpdateInfo,
+  setConfirmCreate
 }) => {
   const { register, reset, handleSubmit } = useForm();
 
@@ -18,14 +19,21 @@ const FormUser = ({
   }, [updateInfo]);
 
   const submit = (data) => {
-    if (updateInfo) {
-      updateUserById(updateInfo.id, data);
-    } else {
-      createNewUser(data);
-    }
-    handleClose();
-    reset(defaultValues);
-  };
+    
+      if (updateInfo) {
+        updateUserById(updateInfo.id, data)
+      } else {
+        setConfirmCreate(true)
+        setTimeout(() => {
+          setConfirmCreate(false)
+        }, 1500);
+        createNewUser(data)
+      }
+      handleClose()
+      reset(defaultValues)
+  }
+
+    
 
   const handleX = () => {
     reset(defaultValues);

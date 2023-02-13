@@ -1,14 +1,23 @@
-import React from "react";
+import React, {  } from "react";
 
-const UserCard = ({ user, deleteUserById, setUpdateInfo, handleOpen }) => {
+
+const UserCard = ({ user, deleteUserById, setUpdateInfo, handleOpen, setConfirmDelete }) => {
   const handleDelete = () => {
-    deleteUserById(user.id);
+    deleteUserById(user.id)
+    setConfirmDelete(true)
+    setTimeout(() => {
+      setConfirmDelete(false)
+    }, 1500);
+    
+    
+    
   };
 
   const handleUpdate = () => {
     setUpdateInfo(user);
     handleOpen();
   };
+
 
   return (
     <article className="card__container">

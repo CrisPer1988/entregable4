@@ -10,6 +10,9 @@ function App() {
   const [updateInfo, setUpdateInfo] = useState();
   const [isOpen, setIsOpen] = useState(false);
   const [isColumn, setIsColumn] = useState(false);
+  const [confirmDelete, setConfirmDelete] = useState(false)
+  const [confirmCreate, setConfirmCreate] = useState(false)
+ 
 
   const getAllUsers = () => {
     const url = `https://users-crud.academlo.tech/users/`;
@@ -45,6 +48,7 @@ function App() {
       .then((res) => {
         console.log(res.data);
         getAllUsers();
+        setConfirmDelete(true)
       })
       .catch((err) => console.log(err));
   };
@@ -77,6 +81,8 @@ function App() {
     }
   };
 
+
+
   return (
     <div className="app">
       <h1 className="app__tittle">Users</h1>
@@ -95,11 +101,19 @@ function App() {
           updateUserById={updateUserById}
           handleClose={handleClose}
           setUpdateInfo={setUpdateInfo}
+          setConfirmCreate={setConfirmCreate}
         />
       </div>
-
+      <div className={!confirmCreate ? "user__create" : "user__create-visible"}>
+      <i class='bx bx-check-circle' ></i>
+          <h2 className="user__create-tittle">User created</h2>
+        </div>
       <div>
         <div className={isColumn ? "app__card-show" : "app__card"}>
+        <div className={!confirmDelete ? "user__delete" : "user__delete-visible"}>
+        <i class='bx bx-trash'></i>
+          <h2>User deleted</h2>
+        </div>
           {users?.map((user) => (
             <UserCard
               key={user.id}
@@ -107,6 +121,7 @@ function App() {
               deleteUserById={deleteUserById}
               setUpdateInfo={setUpdateInfo}
               handleOpen={handleOpen}
+              setConfirmDelete={setConfirmDelete}
             />
           ))}
         </div>
