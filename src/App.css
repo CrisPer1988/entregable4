@@ -131,8 +131,6 @@
   background-color: #f1f1f1;
   border-radius: 15px;
   box-shadow: 4px 4px 4px 2px #555a88;
-  /* transition: transform 0.3s ease, background-color 0.3s ease,
-    color 0.5s ease; */
 }
 
 .card__container:hover {
@@ -238,7 +236,6 @@
 
 .user__delete,
 .user__create {
-   
     transform: scale(0);
     display: none;
 }

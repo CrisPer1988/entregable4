@@ -81,8 +81,6 @@ function App() {
     }
   };
 
-
-
   return (
     <div className="app">
       <h1 className="app__tittle">Users</h1>

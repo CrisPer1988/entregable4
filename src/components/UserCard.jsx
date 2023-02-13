@@ -8,9 +8,6 @@ const UserCard = ({ user, deleteUserById, setUpdateInfo, handleOpen, setConfirmD
     setTimeout(() => {
       setConfirmDelete(false)
     }, 1500);
-    
-    
-    
   };
 
   const handleUpdate = () => {
